@@ -14,11 +14,11 @@ dependencies {
 }
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(30)
     defaultConfig {
-        applicationId = "com.example.kmmapplication.KMMAndroidApp"
-        minSdkVersion(24)
-        targetSdkVersion(29)
+        applicationId = "com.pixolus.kmmapplication.KMMAndroidApp"
+        minSdkVersion(21)
+        targetSdkVersion(30)
         versionCode = 1
         versionName = "1.0"
     }
