@@ -9,7 +9,7 @@ val appCompatVersion = "1.2.0"
 val constraintLayoutVersion = "2.0.4"
 val recyclerViewVersion = "1.1.0"
 val swipeRefreshVersion = "1.1.0"
-val cardViewVersion = "1.1.0"
+val cardViewVersion = "1.0.0"
 val coroutinesAndroidVersion = "1.1.0"
 val coreKtxVersion = "1.3.2"
 
