@@ -36,6 +36,7 @@ internal class Database(databaseDriverFactory: DatabaseDriverFactory) {
         rocket_id: String?,
         name: String?,
         type: String?
+
     ):RocketLaunch {
         return RocketLaunch(
             flightNumber = flightNumber.toInt(),
@@ -48,10 +49,12 @@ internal class Database(databaseDriverFactory: DatabaseDriverFactory) {
                 id = rocketId,
                 name = name!!,
                 type = type!!
+
             ),
             links = Links(
                 missionPatchUrl = missionPatchUrl,
                 articleUrl = articleUrl
+
             )
         )
     }

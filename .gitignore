@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+/shared/build/
+/KMMAndroidApp/build/
+/.idea/gradle.xml
+/.idea/runConfigurations.xml
