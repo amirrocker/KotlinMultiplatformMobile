@@ -26,3 +26,5 @@ sqldelight - a sqlight library
 Note: serialization and sqldelight libraries are also used as plugins so the buildsystem (gradle) has
 access and use the libraries.
 
+After setting up the basic KMM framework by adjusting the gradle files, adding dependencies and
+set up the different source sets it was time to add the basic functionality code to the shared code.and

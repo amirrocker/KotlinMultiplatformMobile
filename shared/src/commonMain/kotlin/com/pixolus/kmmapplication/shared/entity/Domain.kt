@@ -4,8 +4,8 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /** TODO add acl */
+@Serializable
 data class RocketLaunch(
-
     @SerialName("flight_number")
     val flightNumber: Int,
     @SerialName("mission_name")

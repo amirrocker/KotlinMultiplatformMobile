@@ -9,7 +9,7 @@ import com.pixolus.kmmapplication.shared.network.RepositoryAPI
  * this client class is a simple facade class over the classes created
  * and stored inside this modules packages.
  */
-class RepositoryClient(databaseDriverFactory: DatabaseDriverFactory) {
+class Repository(databaseDriverFactory: DatabaseDriverFactory) {
 
     private val database = Database(databaseDriverFactory)
     private val api = RepositoryAPI()

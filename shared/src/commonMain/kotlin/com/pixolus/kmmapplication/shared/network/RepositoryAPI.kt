@@ -6,13 +6,17 @@ import io.ktor.client.features.json.*
 import io.ktor.client.features.json.serializer.*
 import io.ktor.client.request.*
 
+// Note that ktor also has a json object which cannot be used with kotlinx
+// therefor the typealias to differ
+import kotlinx.serialization.json.Json as kotlinxJson
+
 /**
- * the documentation is using the spaceX API so we will to in a first step.
- * Once we do have our own API we will switch but since the domain is also based
+ * the documentation is using the spaceX API so we will too in a first step.
+ * Once we do have our own API we will switch but since the domain objects are also based
  * on spaceX we finish it up and later replace the domain layer and persistence
  * layer. Get it to run on both platforms then adapt.
- * we may encounter an error since the api has upgraded the api to V4 where it
- * was V3 when the documentation was written.
+ * We could just as easily use anything selfmade but that would mean to have to have a server
+ * running somewhere. All too complicated for now.
  *
  * https://docs.spacexdata.com/?version=latest
  * https://github.com/r-spacex/SpaceX-API/tree/master/docs/v4
@@ -26,7 +30,8 @@ class RepositoryAPI {
 
     private val httpClient = HttpClient {
         install(JsonFeature) {
-           serializer = KotlinxSerializer()
+           val json = kotlinxJson { ignoreUnknownKeys=true }
+            serializer = KotlinxSerializer(json)
         }
     }
 
